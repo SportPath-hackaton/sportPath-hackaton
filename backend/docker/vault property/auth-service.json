@@ -1,0 +1,13 @@
+{
+  "server.port": "8081",
+  "eureka.client.fetchRegistry": "true",
+  "eureka.client.registerWithEureka": "true",
+  "eureka.client.serviceUrl.defaultZone": "http://eureka-server:8761/eureka/",
+  "eureka.instance.instance-id": "${spring.application.name}:${spring.application.instance_id:${random.value}}",
+  "eureka.instance.preferIpAddress": "true",
+  "logging.level.org.hackaton.max2025.auth": "DEBUG",
+  "management.endpoints.enabled-by-default": "true",
+  "management.endpoints.web.exposure.include": "*",
+  "jwt.secret": "hackathon-super-secret-jwt-key-2025",
+  "max.bot-token": ""
+}

@@ -1,0 +1,47 @@
+{
+  "spring.datasource.url": "jdbc:postgresql://postgres:5432/sportpath_dev",
+  "spring.datasource.username": "postgres",
+  "spring.datasource.password": "postgres",
+  "spring.datasource.driver-class-name": "org.postgresql.Driver",
+  "spring.datasource.hikari.connection-test-query": "SELECT 1",
+  "spring.datasource.hikari.maximum-pool-size": "10",
+  "spring.datasource.hikari.minimum-idle": "2",
+  "spring.datasource.hikari.validation-timeout": "3000",
+
+  "spring.jpa.hibernate.ddl-auto": "validate",
+  "spring.jpa.database": "POSTGRESQL",
+  "spring.jpa.show-sql": "true",
+  "spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect",
+  "spring.jpa.hibernate.naming.physical-strategy": "org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl",
+
+  "server.port": "8082",
+
+  "spring.cloud.loadbalancer.ribbon.enabled": "false",
+
+  "eureka.instance.preferIpAddress": "true",
+  "eureka.instance.instance-id": "${spring.application.name}:${spring.application.instance_id:${random.value}}",
+  "eureka.client.registerWithEureka": "true",
+  "eureka.client.fetchRegistry": "true",
+  "eureka.client.serviceUrl.defaultZone": "http://eureka-server:8761/eureka/",
+
+  "management.endpoints.web.exposure.include": "*",
+  "management.endpoints.enabled-by-default": "true",
+
+  "spring.cloud.stream.bindings.entryEvents-out-0.destination": "entry-events",
+  "spring.cloud.stream.bindings.entryEvents-out-0.content-type": "application/json",
+
+  "spring.cloud.stream.kafka.binder.brokers": "kafka:9092",
+  "spring.cloud.stream.kafka.binder.auto-create-topics": "true",
+  "spring.cloud.stream.kafka.binder.auto-add-partitions": "true",
+
+  "spring.cloud.stream.kafka.binder.producer-properties.acks": "all",
+  "spring.cloud.stream.kafka.binder.producer-properties.retries": "3",
+  "spring.cloud.stream.kafka.binder.producer-properties.batch-size": "16384",
+  "spring.cloud.stream.kafka.binder.producer-properties.linger.ms": "1",
+  "spring.cloud.stream.kafka.binder.producer-properties.buffer-memory": "33554432",
+
+  "logging.level.org.springframework.cloud.stream": "DEBUG",
+  "logging.level.org.apache.kafka": "INFO",
+  "logging.level.org.springframework.kafka": "DEBUG",
+  "logging.level.org.hackaton.max2025.entry": "DEBUG"
+}
