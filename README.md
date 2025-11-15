@@ -1,3 +1,10 @@
+(Проперти):
+
+VITE_2GIS_API_KEY="989c1630-2a15-477b-8736-84cf65cf0ab8"
+VITE_OPENWEATHER_API_KEY="a6982a7923c7341b5e88ac6e1b247a96"
+Токен бота: f9LHodD0cOIuucnTRUvZFOa-HLF8GQpaQMlZqTktqZUFVfx3Kpt6LT7tEL8JxCQnSRJ2UhQg1ELkGxP2oTNk
+
+
 # SportPath - Система записи на спортивные площадки
 
 Проект для поиска и записи на спортивные площадки с интеграцией MAX Mini App. Система состоит из микросервисной архитектуры на бэкенде и современного React-приложения на фронтенде.
