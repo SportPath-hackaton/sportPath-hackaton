@@ -1,0 +1,11 @@
+### POST search points
+POST http://localhost:8081/v1/courts/search/points
+Content-Type: application/json
+
+{
+  "cityId": 1,
+  "sports": ["BASKETBALL", "TENNIS"]
+}
+
+### GET get all courts
+GET http://localhost:8081/v1/courts?page=0&size=10

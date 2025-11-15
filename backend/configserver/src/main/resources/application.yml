@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: vault
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    config:
+      server:
+        vault:
+          host: vault
+          port: 8200
+          scheme: http
+          token: root
+          kv-version: 2
+          backend: secret
+          default-key: default
+          profile-separator: "/"
+
+server:
+  port: 8071
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.cloud.config.server: TRACE
+    org.springframework.vault: TRACE
+    org.springframework.web: DEBUG
+    org.springframework.boot: DEBUG
+    com.ostock: DEBUG

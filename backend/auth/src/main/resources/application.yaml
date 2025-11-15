@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: auth-service
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: http://localhost:8071
+      enabled: true
+  config:
+    import: "configserver:"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh, mappings
+    enabled-by-default: true

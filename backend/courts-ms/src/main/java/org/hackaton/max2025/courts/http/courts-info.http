@@ -1,0 +1,82 @@
+@id=24188973-cf93-43d5-a1f2-a1f88454fafa
+@test_id=
+
+### POST search locations
+POST http://localhost:8081/v1/courts/info/search/locations?page=0&size=10
+Content-Type: application/json
+
+{
+  "cityId": 1,
+  "sports": ["TENNIS", "BASKETBALL"]
+}
+
+### GET get all courts info
+GET http://localhost:8081/v1/courts/info
+
+### GET get court info by id
+GET http://localhost:8081/v1/courts/info/{{id}}
+
+### POST create
+POST http://localhost:8081/v1/courts/info
+Content-Type: application/json
+
+{
+  "lat": 55.7558,
+  "lon": 37.6176,
+  "address": "ул. Новая, д. 1, Москва",
+  "rating": 4.6,
+  "type": "TENNIS",
+  "photoUrl": "https://example.com/photo5.jpg",
+  "paid": false,
+  "description": "Новый теннисный корт с освещением",
+  "title": "Новый теннисный корт",
+  "city_id": 1
+}
+
+
+###PUT update
+PUT http://localhost:8081/v1/courts/info/24188973-cf93-43d5-a1f2-a1f88454fafa
+Content-Type: application/json
+
+{
+"lat": 55.7558,
+"lon": 37.6176,
+"address": "ул. Теннисная, д. 1, ЦПКиО, Москва",
+"rating": 4.6,
+"type": "TENNIS",
+"photoUrl": "https://example.com/photo1.jpg",
+"paid": false,
+"description": "Открытый теннисный корт, 2 корта, обновлено описание",
+"title": "Теннисный корт ЦПКиО",
+"city": {
+"id": 1
+}
+}
+
+###DELETE delete
+DELETE http://localhost:8081/v1/courts/info/{{test_id}}
+
+
+### POST history entry
+POST http://localhost:8081/v1/courts/info/history/entry
+Content-Type: application/json
+
+{
+  "courtIds": [
+    "24188973-cf93-43d5-a1f2-a1f88454fafa",
+    "742a82c4-96cd-42d8-bef1-4ea739877b16",
+    "4b350568-803d-4f53-82e2-5fafebdca5af"
+  ]
+}
+
+### POST active entry
+POST http://localhost:8081/v1/courts/info/active/entry
+Content-Type: application/json
+
+{
+"courtIds": [
+"742a82c4-96cd-42d8-bef1-4ea739877b16",
+"75951122-7aa6-4ebc-960b-a7fa101696ff",
+"4b350568-803d-4f53-82e2-5fafebdca5af"
+]
+}

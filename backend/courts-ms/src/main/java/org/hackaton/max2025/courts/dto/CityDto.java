@@ -1,0 +1,17 @@
+package org.hackaton.max2025.courts.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class CityDto {
+
+    private Long id;
+
+    private String name;
+}
