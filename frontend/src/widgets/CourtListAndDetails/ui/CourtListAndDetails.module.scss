@@ -1,0 +1,61 @@
+.MobileSheet {
+	position: fixed;
+	z-index: 1000;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	background-color: white;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	box-shadow: 0 -4px 6px rgb(0 0 0 / 10%);
+	transition: height 0.3s ease;
+}
+
+.MobileSheet--withDetails {
+	height: 65%;
+}
+
+.MobileSheet--withList {
+	height: 57%;
+}
+
+.MobileSheet--withBooking {
+	height: auto;
+}
+
+.MobileSheet--withRouteList {
+	height: auto;
+}
+
+.panel {
+	overflow: hidden;
+}
+
+.MobileSheetContent {
+	flex: 1;
+	padding: 0.625rem;
+	overflow-y: auto;
+}
+
+.OpenButton {
+	position: fixed;
+	z-index: 1000;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.CloseButton {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: none;
+	cursor: pointer;
+}

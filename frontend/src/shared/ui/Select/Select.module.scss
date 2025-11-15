@@ -1,0 +1,93 @@
+.Select {
+	display: flex;
+	height: 3.125rem;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0.75rem;
+	border-radius: 1rem;
+	background-color: var(--max-accent-color);
+	color: var(--text-color);
+	cursor: pointer;
+
+	&[data-headlessui-state] {
+		width: 100%;
+		padding: 0;
+		border: none;
+		background-color: var(--max-accent-color);
+		outline: none;
+		text-align: left;
+	}
+}
+
+.SelectOptions {
+	position: absolute;
+	z-index: 100;
+	top: 100%;
+	right: 0;
+	left: auto;
+	width: 33%;
+	max-height: 12.5rem;
+	border-radius: 1rem;
+	margin-top: 4px;
+	background-color: var(--max-accent-color);
+	color: var(--text-color);
+	outline: none;
+	overflow-y: auto;
+	padding-block: 6px;
+}
+
+.SelectOptions_large {
+	width: 76%;
+}
+
+.SelectOption {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0.75rem;
+	color: var(--text-color);
+	cursor: pointer;
+	font-size: 0.875rem;
+	font-weight: 500;
+	outline: none;
+	text-align: center;
+
+	&:not(&_selected):hover {
+		opacity: 64%;
+	}
+
+	&_selected {
+		color: darkgrey;
+	}
+}
+
+.SelectOptionContent {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	border-radius: 1rem;
+	gap: 6px;
+}
+
+.SelectOptionContent:hover {
+	background-color: var(--max-accent-hover-color);
+}
+
+.SelectOptionCheck {
+	width: 1rem;
+	height: 1rem;
+	flex-shrink: 0;
+	visibility: hidden;
+}
+
+.SelectOptionCheck_visible {
+	visibility: visible;
+}
+
+.SelectOptionText {
+	overflow: hidden;
+	flex-grow: 1;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
